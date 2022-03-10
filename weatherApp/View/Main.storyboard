@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_background" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-Fi-bbH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search City" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRv-gl-ynn">
+                                <rect key="frame" x="80" y="84" width="254" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gf-jr-Q8E">
+                                <rect key="frame" x="334" y="84" width="24.666666666666686" height="30"/>
+                                <color key="tintColor" systemColor="tertiaryLabelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchCityButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="be0-kh-gdd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kC6-Zy-dLH">
+                                <rect key="frame" x="224" y="168.66666666666666" width="150" height="151"/>
+                                <color key="tintColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="G8r-Ho-xgA">
+                                        <variation key="widthClass=compact" constant="150"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="150" id="p4U-UI-C01">
+                                        <variation key="widthClass=compact" constant="150"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFG-rm-Wzo">
+                                <rect key="frame" x="174" y="358" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EIq-bV-5wF">
+                                        <variation key="widthClass=compact" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="100" id="epF-ve-2R5">
+                                        <variation key="widthClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8P-0o-qyO">
+                                <rect key="frame" x="214" y="463" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ELs-BF-mGm"/>
+                                    <constraint firstAttribute="height" constant="30" id="pHj-YQ-9HH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qd-yb-ai5">
+                                <rect key="frame" x="20" y="82.666666666666657" width="40" height="43.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UtV-gV-YUl"/>
+                                    <constraint firstAttribute="width" constant="40" id="bgL-Ae-1wy"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="quaternarySystemFillColor"/>
+                                    <imageReference key="backgroundImage" image="line.3.crossed.swirl.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Akf-Dp-Ago"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kC6-Zy-dLH" firstAttribute="top" secondItem="JRv-gl-ynn" secondAttribute="bottom" constant="50" id="4R5-Tx-dU2">
+                                <variation key="heightClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="4l9-Fi-bbH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4lp-xs-uXo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zFG-rm-Wzo" secondAttribute="trailing" constant="40" id="5uc-Yv-2Fd"/>
+                            <constraint firstItem="6Gf-jr-Q8E" firstAttribute="leading" secondItem="JRv-gl-ynn" secondAttribute="trailing" id="9u0-ee-YCU"/>
+                            <constraint firstItem="4l9-Fi-bbH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BXu-8M-3i1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kC6-Zy-dLH" secondAttribute="trailing" constant="40" id="CAq-Ix-Szo"/>
+                            <constraint firstAttribute="trailing" secondItem="4l9-Fi-bbH" secondAttribute="trailing" id="Ckg-dR-cmL"/>
+                            <constraint firstItem="JRv-gl-ynn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="D8Y-YU-s55"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U8P-0o-qyO" secondAttribute="trailing" constant="50" id="HDy-tC-Q4u"/>
+                            <constraint firstItem="4l9-Fi-bbH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IqN-2v-L6w"/>
+                            <constraint firstItem="U8P-0o-qyO" firstAttribute="top" secondItem="zFG-rm-Wzo" secondAttribute="bottom" constant="5" id="LBC-Di-RFd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JRv-gl-ynn" secondAttribute="trailing" constant="80" id="Rvu-Bu-1uz"/>
+                            <constraint firstItem="6Gf-jr-Q8E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="U5j-PB-zot"/>
+                            <constraint firstItem="6Gf-jr-Q8E" firstAttribute="height" secondItem="JRv-gl-ynn" secondAttribute="height" multiplier="0.882353" id="VzC-j0-gBp"/>
+                            <constraint firstItem="9Qd-yb-ai5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="iv2-m2-rf7"/>
+                            <constraint firstItem="zFG-rm-Wzo" firstAttribute="top" secondItem="kC6-Zy-dLH" secondAttribute="bottom" constant="40" id="mCW-hU-F4x">
+                                <variation key="heightClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="JRv-gl-ynn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="uIA-1p-IuM"/>
+                            <constraint firstItem="9Qd-yb-ai5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uuN-0J-Rhu"/>
+                            <constraint firstAttribute="bottom" secondItem="4l9-Fi-bbH" secondAttribute="bottom" id="yx9-cC-0Ro"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SearchButton" destination="6Gf-jr-Q8E" id="25x-7e-bHJ"/>
+                        <outlet property="SearchCityTextFeild" destination="JRv-gl-ynn" id="HhA-xS-lXn"/>
+                        <outlet property="cityName" destination="U8P-0o-qyO" id="aJA-mV-QHh"/>
+                        <outlet property="currentLoctionButton" destination="9Qd-yb-ai5" id="4XV-Hh-fmm"/>
+                        <outlet property="tempratureText" destination="zFG-rm-Wzo" id="wxE-2q-hKM"/>
+                        <outlet property="weatcherIcon" destination="kC6-Zy-dLH" id="Z3P-p7-ui1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.rain" catalog="system" width="128" height="125"/>
+        <image name="light_background" width="662" height="662"/>
+        <image name="line.3.crossed.swirl.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
